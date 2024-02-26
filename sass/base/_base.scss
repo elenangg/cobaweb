@@ -28,3 +28,49 @@ html {
 body {
     box-sizing: border-box;
 }
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & img {
+        width: 15vw;
+        height: 20vw;
+    }
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+   
+    main aside {
+      align-self: center;
+    }
+  }
+   
+  /* Perangkat dengan lebar layar 768px dan di bawahnya */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+   
+    main aside {
+      align-self: stretch;
+    }
+  }
